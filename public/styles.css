@@ -4,3 +4,4 @@
 .topright .product-link{display:inline-flex;align-items:center;min-height:36px;padding:8px 14px;border-radius:999px;background:#22242c;color:#fff;white-space:nowrap}
 .topright .product-link:hover{background:#3a5044}
 .topright .product-link:focus-visible{outline:3px solid #83c9af;outline-offset:3px}
+.local-setup{min-width:0}.local-setup h3{font-size:18px;letter-spacing:-.4px}.local-setup p{font-size:13px;line-height:1.7;color:#777b7d}.local-setup pre{max-width:100%;overflow:auto;padding:18px;border-radius:10px;background:#f4f7f4;line-height:1.8;font-size:12px;color:#33493e}.local-setup code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.local-setup .secondary-link{margin-top:8px}

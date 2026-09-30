@@ -3,6 +3,7 @@
 .env.*
 !.env.example
 generated/
+dist/
 node_modules/
 *.job.json
 *.result.json

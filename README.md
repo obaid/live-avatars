@@ -1,5 +1,7 @@
 # Live Avatars
 
+**[Try the live playground →](https://obaid.github.io/live-avatars/#playground)** — explore all moods, colors, and stackable accessories in your browser. No installation or API key needed. Avatar generation is available through the local setup below.
+
 A working playground and technical recipe for building a cute, consistent animated character from one reference image. The included Nestor example has **12 expressions, 15 short motion clips, five live colors, and two stackable accessories**. Try every state without an API key; bring your own [fal.ai](https://fal.ai) key to generate a new portrait or animation locally.
 
 **Meet the assistant behind the avatar:** [Hire Nestor](https://hirenestor.com/) helps with the real-life tasks you keep meaning to do. Join the early-access waitlist at HireNestor.com.
@@ -25,6 +27,14 @@ Open **http://127.0.0.1:4175**. The server binds only to loopback. Select a mood
 3. **Motion clip** → H3 Max Turbo image-to-video with the same image as first and last frame.
 
 Generation uses your fal account and can incur charges. A single click submits one request; wait for its queue result before trying again. If a submission times out, check your fal request history before resubmitting so you don't pay for a duplicate. The sample player needs no key and makes no fal calls.
+
+## Publish the live demo
+
+The [GitHub Pages playground](https://obaid.github.io/live-avatars/) runs the bundled sample entirely in the browser. It includes every mood, color, and accessory; its generation section links to the local setup instead of requesting a key.
+
+`npm run build:pages` creates a deployable `dist/` directory from `public/` and the shared `src/appearance.mjs` renderer. Relative asset URLs support both the `/live-avatars/` project path and a custom domain. The output excludes the local server, credentials, and generated files. GitHub Actions tests and publishes this demo on each push to `main`.
+
+To use the workflow in a fork, enable **Settings → Pages → Source: GitHub Actions** and update this README's demo links for your account.
 
 ## How it works
 
