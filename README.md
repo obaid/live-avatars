@@ -2,6 +2,8 @@
 
 A working playground and technical recipe for building a cute, consistent animated character from one reference image. The included Nestor example has **12 expressions, 15 short motion clips, five live colors, and two stackable accessories**. Try every state without an API key; bring your own [fal.ai](https://fal.ai) key to generate a new portrait or animation locally.
 
+**Meet the assistant behind the avatar:** [Hire Nestor](https://hirenestor.com/) helps with the real-life tasks you keep meaning to do. Join the early-access waitlist at HireNestor.com.
+
 The visual direction was inspired by [ChatGPT dots](https://help.openai.com/en/articles/20001530-getting-started-with-your-dot), [Grok Bot's expressive avatars](https://x.ai/news/designing-grok-bot), and [Meta Muse](https://research.meta.ai/blog/bringing-your-muse-to-life). This repository explains Nestor's independently built character and pipeline; it contains no assets or implementation from those products.
 
 ![Live Avatars playground](docs/playground.png)
