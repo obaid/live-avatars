@@ -80,7 +80,7 @@ async function handle(req,res) {
     if (req.method !== 'GET') return fail(res,405,'Method not allowed.')
     let file = staticFiles.get(url.pathname)
     if (!file) {
-      const clip = url.pathname.match(/^\/sample\/clips\/([a-z-]+)\.mp4$/)
+      const clip = url.pathname.match(/^\/sample\/clips\/([a-z0-9-]+)\.mp4$/)
       const portrait = url.pathname.match(/^\/sample\/portraits\/([a-z]+)\.jpg$/)
       if (clip && clipNames.has(clip[1])) file = [`public${url.pathname}`,'video/mp4']
       if (portrait && stateNames.has(portrait[1])) file = [`public${url.pathname}`,'image/jpeg']

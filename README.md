@@ -1,6 +1,6 @@
 # Live Avatars
 
-A working playground and technical recipe for building a cute, consistent animated character from one reference image. The included Nestor example has **12 expressions, 15 short motion clips, five live colors, and two accessories**. Try every state without an API key; bring your own [fal.ai](https://fal.ai) key to generate a new portrait or animation locally.
+A working playground and technical recipe for building a cute, consistent animated character from one reference image. The included Nestor example has **12 expressions, 15 short motion clips, five live colors, and two stackable accessories**. Try every state without an API key; bring your own [fal.ai](https://fal.ai) key to generate a new portrait or animation locally.
 
 The visual direction was inspired by [ChatGPT dots](https://help.openai.com/en/articles/20001530-getting-started-with-your-dot), [Grok Bot's expressive avatars](https://x.ai/news/designing-grok-bot), and [Meta Muse](https://research.meta.ai/blog/bringing-your-muse-to-life). This repository explains Nestor's independently built character and pipeline; it contains no assets or implementation from those products.
 
@@ -16,7 +16,7 @@ cd live-avatars
 npm start
 ```
 
-Open **http://127.0.0.1:4175**. The server binds only to loopback. Select a mood, color, and accessory to play with the bundled sample. To make your own, upload an image you own or have permission to edit, enter a fal key, adjust the prompt, and choose one generation step:
+Open **http://127.0.0.1:4175**. The server binds only to loopback. Select a mood and color, then add glasses, a bow, or both to the bundled sample. To make your own, upload an image you own or have permission to edit, enter a fal key, adjust the prompt, and choose one generation step:
 
 1. **Identity-preserving master** → Nano Banana 2 image edit.
 2. **Expression still** → Nano Banana 2 image edit from your current portrait.

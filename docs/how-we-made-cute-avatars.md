@@ -6,7 +6,7 @@ We wanted Nestor, a personal assistant, to feel present while it worked. A masco
 
 The inspiration was the expressive presence of [ChatGPT dots](https://help.openai.com/en/articles/20001530-getting-started-with-your-dot), [Grok Bot's character system](https://x.ai/news/designing-grok-bot), and [Meta Muse](https://research.meta.ai/blog/bringing-your-muse-to-life). Nestor's artwork and the pipeline below are our own; this is a record of how we built our version, not a description of those products' internals.
 
-The result is a fuzzy mint companion with twelve states: idle, greeting, working, waiting, needing attention, celebrating, thinking, at a computer, confused, sleeping, tired, and excited. It uses fifteen short video clips, including alternate idle, working, and celebration takes. The same face appears in every state; the user can recolor it or add glasses or a bow without generating another video set.
+The result is a fuzzy mint companion with twelve states: idle, greeting, working, waiting, needing attention, celebrating, thinking, at a computer, confused, sleeping, tired, and excited. It uses fifteen short video clips, including alternate idle, working, and celebration takes. The same face appears in every state; the user can recolor it or stack glasses and a bow without generating another video set.
 
 ![The Live Avatars playground](playground.png)
 
@@ -30,7 +30,7 @@ The player receives a small configuration object: `emotion`, `color`, `accessory
 
 ## Personalize the pixels, not the whole generation budget
 
-Generating every color and accessory combination for every state would multiply cost and make identity drift harder to control. Instead, we decode the selected video into a 320-pixel Canvas. A selective color mask changes only mint fur while retaining each pixel's lightness and chroma. The glossy eyes, laptop, and pale background stay neutral. Simple pixel heuristics find the fur bounds and eye centers, then position SVG glasses or a bow over the moving face. The same functions bake small static portraits for native rows and fallback states: five colors × three accessory options × twelve expressions = 180 images.
+Generating every color and accessory combination for every state would multiply cost and make identity drift harder to control. Instead, we decode the selected video into a 320-pixel Canvas. A selective color mask changes only mint fur while retaining each pixel's lightness and chroma. The glossy eyes, laptop, and pale background stay neutral. Simple pixel heuristics find the fur bounds and eye centers, then position SVG glasses and a bow over the moving face. The playground supports four combinations—neither, either one, or both—so five colors × four combinations × twelve expressions would otherwise mean 240 separate variants. The original app's native rows used three accessory choices and baked 180 small static portraits with the same appearance functions.
 
 This is a deliberately pragmatic architecture. The avatar looks dimensional because the source artwork and motion are rendered that way; there is no live 3D mesh, skeleton, or simulated fur. Accessory tracking can drift on difficult frames, so a production team should inspect its own clips frame by frame and test physical-device performance.
 

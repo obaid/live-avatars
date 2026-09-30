@@ -4,7 +4,7 @@
 
 A cute AI-generated image is easy to make. A character that still looks like itself when it's thinking, working, waiting, and celebrating is harder. The expressive presence of [ChatGPT dots](https://help.openai.com/en/articles/20001530-getting-started-with-your-dot), [Grok Bot](https://x.ai/news/designing-grok-bot), and [Meta Muse](https://research.meta.ai/blog/bringing-your-muse-to-life) inspired us to solve that problem for Nestor, a personal assistant with its own small fuzzy companion.
 
-We built twelve emotional states and fifteen short animations, then made the same character customizable in five colors with optional glasses or a bow. The final app doesn't generate media during normal use. It plays small, curated assets offline.
+We built twelve emotional states and fifteen short animations, then made the same character customizable in five colors with glasses, a bow, or both. The final app doesn't generate media during normal use. It plays small, curated assets offline.
 
 The character and implementation here are Nestor's own; this post explains our pipeline rather than the internals of those products.
 
@@ -22,7 +22,7 @@ We selected fifteen takes and encoded them as silent 320×320 H.264 clips at 24 
 
 ### Customize the player, not every asset
 
-Pre-generating every color, accessory, and expression combination would mean 180 variants before adding alternate motions. Instead, a Canvas layer reads the video frame and recolors only the mint fur, preserving its texture and lightness. Simple face anchors place SVG glasses or a bow over the moving image. The eyes, laptop, and neutral background stay untouched.
+Pre-generating every color, accessory, and expression combination in the playground would mean 240 variants before adding alternate motions. Instead, a Canvas layer reads the video frame and recolors only the mint fur, preserving its texture and lightness. Simple face anchors place SVG glasses, a bow, or both over the moving image. The eyes, laptop, and neutral background stay untouched.
 
 This is a practical image-to-video pipeline, not a live 3D model. The dimension comes from the rendered artwork; the responsiveness comes from local playback and compositing. It gives Nestor a stable visual identity without model latency or generation cost every time the user opens the app.
 

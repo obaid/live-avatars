@@ -4,7 +4,7 @@
 
 I wanted Nestor to feel present while it helped with a task. The expressive feel of [ChatGPT dots](https://help.openai.com/en/articles/20001530-getting-started-with-your-dot), [Grok Bot](https://x.ai/news/designing-grok-bot), and [Meta Muse](https://research.meta.ai/blog/bringing-your-muse-to-life) was the inspiration. A tiny glance, a blink, or a moment of celebration can make an assistant feel warmer. But if every animation comes back with different eyes or a new silhouette, that personality falls apart.
 
-We ended up with one fuzzy character, twelve emotional states, fifteen short motion clips, and live color/accessory customization. The app plays it all offline. Here's the pipeline—and a [playground you can run locally](https://github.com/obaid/live-avatars) with your own fal.ai key.
+We ended up with one fuzzy character, twelve emotional states, fifteen short motion clips, and live color/accessory customization—including glasses and a bow worn together. The app plays it all offline. Here's the pipeline—and a [playground you can run locally](https://github.com/obaid/live-avatars) with your own fal.ai key.
 
 This is Nestor's own character and implementation, not a copy of those products' assets or an account of their technical internals.
 
@@ -22,7 +22,7 @@ The restrained takes looked more alive than the busy ones because you could stil
 
 ## 3. Do personalization at playback time
 
-Five colors × three accessory options × twelve expressions would require 180 variants if every combination were generated separately. We instead draw the chosen clip into a small Canvas. A selective tint changes the mint fur while preserving its lightness and texture. The eyes, laptop, and background remain intact. A face anchor derived from the frame places SVG glasses or a bow over the moving avatar.
+Five colors × four accessory combinations × twelve expressions would require 240 variants if every combination were generated separately. We instead draw the chosen clip into a small Canvas. A selective tint changes the mint fur while preserving its lightness and texture. The eyes, laptop, and background remain intact. A face anchor derived from the frame places SVG glasses, a bow, or both over the moving avatar.
 
 This is curated video and pixel-level compositing, not a real-time 3D rig. It also means the app makes no model call when a user changes color or assigns work. Task events select a state: computer work when it's actually using the browser, attention when it needs a decision, celebration on completion. Reduced Motion shows a matching still.
 

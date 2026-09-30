@@ -21,6 +21,7 @@ test('local sample works without a key; one mocked paid request can finish witho
   const base=`http://127.0.0.1:${server.address().port}`
   try{
     const sample=await nativeFetch(base+'/sample/portraits/idle.jpg');assert.equal(sample.status,200);assert.equal(sample.headers.get('content-type'),'image/jpeg')
+    const clip=await nativeFetch(base+'/sample/clips/computer-h3.mp4');assert.equal(clip.status,200);assert.equal(clip.headers.get('content-type'),'video/mp4');assert.ok((await clip.arrayBuffer()).byteLength>1000)
     const noKey=await nativeFetch(base+'/api/jobs',{method:'POST',headers:{'content-type':'application/json'},body:'{}'});assert.equal(noKey.status,400)
     const blocked=await nativeFetch(base+'/api/health',{headers:{origin:'https://external.example'}});assert.equal(blocked.status,403)
     const submit=await nativeFetch(base+'/api/jobs',{method:'POST',headers:{'content-type':'application/json','x-fal-key':'example-not-a-real-key'},body:JSON.stringify({kind:'image',prompt:'a curious blink',reference:'data:image/png;base64,iVBORw0KGgo='})})

@@ -15,7 +15,7 @@ Full-length drafts: [X Article](x-article.md) · [LinkedIn article](linkedin-art
 
 **3/5** H3 Max Turbo turned those stills into short, restrained loops. The same image at the start and end helps the motion return home. I reviewed first/middle/last frames and threw out takes that changed the face, fur, or props.
 
-**4/5** The app plays 15 pre-rendered clips across 12 states. Canvas recolors the fur and tracks the face for glasses or a bow, so five colors and three accessory options don't require 180 video generations. Reduced Motion uses a matching still.
+**4/5** The app plays 15 pre-rendered clips across 12 states. Canvas recolors the fur and tracks the face for glasses, a bow, or both. Five colors and four accessory combinations don't require 240 video generations. Reduced Motion uses a matching still.
 
 **5/5** The repo has a sample you can play with for free, prompt templates, the offline renderer, and a local fal queue proxy. BYOK generation is one explicit job at a time. Full technical walkthrough: https://github.com/obaid/live-avatars/blob/main/docs/how-we-made-cute-avatars.md
 
@@ -27,7 +27,7 @@ Here’s the pipeline we landed on:
 
 1. Start with one approved reference. Use Nano Banana 2 to create a master portrait and expression stills, while constraining the silhouette, eye geometry, framing, and background.
 2. Animate each still with H3 Max Turbo into a short, restrained loop. Give it a matching start/end image, then inspect the first, middle, and final frames. We discarded takes that invented limbs or drifted from the character.
-3. Ship pre-rendered assets and play them offline. In the app, task events choose among 12 expressions. A Canvas layer recolors the fuzzy body and places glasses or a bow without multiplying the video-generation budget.
+3. Ship pre-rendered assets and play them offline. In the app, task events choose among 12 expressions. A Canvas layer recolors the fuzzy body and places glasses and a bow without multiplying the video-generation budget.
 
 The result is 15 compact clips, a consistent companion, and no generation request during normal app use. It *looks* dimensional, but this is curated video plus pixel-level personalization, not a real-time 3D rig.
 
