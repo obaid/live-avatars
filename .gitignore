@@ -1,0 +1,8 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+generated/
+node_modules/
+*.job.json
+*.result.json
