@@ -5,9 +5,11 @@ Repository: https://github.com/obaid/live-avatars
 Article: https://github.com/obaid/live-avatars/blob/main/docs/how-we-made-cute-avatars.md
 Suggested visual: `docs/playground.png` or a short capture switching between idle, thinking, computer work, and celebration.
 
+Full-length drafts: [X Article](x-article.md) · [LinkedIn article](linkedin-article.md). The posts below are shorter launch options.
+
 ## X thread
 
-**1/5** I built a tiny fuzzy avatar for Nestor that can think, work, wait, celebrate, and even fall asleep—without generating anything while the app runs. I open-sourced the pipeline + a playground so you can try it with your own fal.ai key: https://github.com/obaid/live-avatars
+**1/5** Inspired by the expressive feel of ChatGPT dots, Grok Bot, and Meta Muse, I built Nestor its own tiny fuzzy avatar. It thinks, works, waits, celebrates, and falls asleep—without generating anything while the app runs. Pipeline + BYOK playground: https://github.com/obaid/live-avatars
 
 **2/5** The trick was consistency. I started from one approved reference, used Nano Banana 2 to make a master and expression stills, and kept the silhouette, eyes, lighting, and framing locked in every prompt. “Make it cute” alone gives you a different character every time.
 
@@ -19,7 +21,7 @@ Suggested visual: `docs/playground.png` or a short capture switching between idl
 
 ## LinkedIn
 
-I wanted Nestor’s avatar to feel like the same little companion whether it was thinking, working, waiting, or celebrating. Generating a cute still was easy. Keeping its face and material consistent across motion was the real design and engineering problem.
+The expressive characters in ChatGPT dots, Grok Bot, and Meta Muse inspired me to give Nestor its own tiny companion. I wanted it to feel like the same character whether it was thinking, working, waiting, or celebrating. Generating a cute still was easy. Keeping its face and material consistent across motion was the real design and engineering problem.
 
 Here’s the pipeline we landed on:
 

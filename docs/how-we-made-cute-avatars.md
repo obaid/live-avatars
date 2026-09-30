@@ -4,6 +4,8 @@
 
 We wanted Nestor, a personal assistant, to feel present while it worked. A mascot can do that with a glance or a tiny pause. It can also break trust if it changes face every time it blinks. The problem was less “generate a cute image” and more “keep one recognizable character across a dozen emotional states, without running a generative model in the app.”
 
+The inspiration was the expressive presence of [ChatGPT dots](https://help.openai.com/en/articles/20001530-getting-started-with-your-dot), [Grok Bot's character system](https://x.ai/news/designing-grok-bot), and [Meta Muse](https://research.meta.ai/blog/bringing-your-muse-to-life). Nestor's artwork and the pipeline below are our own; this is a record of how we built our version, not a description of those products' internals.
+
 The result is a fuzzy mint companion with twelve states: idle, greeting, working, waiting, needing attention, celebrating, thinking, at a computer, confused, sleeping, tired, and excited. It uses fifteen short video clips, including alternate idle, working, and celebration takes. The same face appears in every state; the user can recolor it or add glasses or a bow without generating another video set.
 
 ![The Live Avatars playground](playground.png)
