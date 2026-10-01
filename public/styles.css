@@ -5,3 +5,24 @@
 .topright .product-link:hover{background:#3a5044}
 .topright .product-link:focus-visible{outline:3px solid #83c9af;outline-offset:3px}
 .local-setup{min-width:0}.local-setup h3{font-size:18px;letter-spacing:-.4px}.local-setup p{font-size:13px;line-height:1.7;color:#777b7d}.local-setup pre{max-width:100%;overflow:auto;padding:18px;border-radius:10px;background:#f4f7f4;line-height:1.8;font-size:12px;color:#33493e}.local-setup code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.local-setup .secondary-link{margin-top:8px}
+
+/* Keep the playground first, with a clear invitation to meet its companion. */
+.intro{display:grid;grid-template-columns:minmax(0,1fr) 292px;gap:54px;align-items:center;padding-top:76px;padding-bottom:72px}
+.intro h1{font-size:clamp(54px,6.1vw,84px);letter-spacing:-4.5px;line-height:1.04;max-width:none}
+.intro-actions{flex-wrap:wrap;gap:10px}
+.intro-actions a{min-width:0;gap:22px;min-height:48px}
+.star-link{gap:9px!important;background:#fff}
+.star-link>span:first-child{font-size:20px;line-height:1}
+.intro-actions a:focus-visible,.nestor-cta:focus-visible{outline:3px solid #46836b;outline-offset:4px}
+.intro-actions .secondary-link:hover{border-color:#8a9c90;background:#edf3ee}
+.topright .product-link{gap:9px;min-height:46px;padding:6px 14px 6px 7px;font-size:13px;background:#294e40}
+.topright .product-link img{border-radius:50%;object-fit:cover}
+.nestor-intro{padding:28px 24px;border-radius:24px;background:#e6f1ea;border:1px solid #d3e4d9;text-align:center}
+.nestor-portrait{display:block;width:180px;height:180px;margin:0 auto 20px;border-radius:50%;object-fit:cover}
+.nestor-intro h2{font-family:Manrope,sans-serif;font-size:28px;letter-spacing:-1px;margin:0 0 10px}
+.nestor-intro p{font-size:13px;line-height:1.65;color:#52685a;margin:0 0 20px}
+.nestor-cta{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;min-height:46px;padding:13px 22px;border-radius:12px;background:#294e40;color:white;font-size:13px;font-weight:800}
+.nestor-cta:hover{background:#1e3d31}
+.nestor-note{display:block;margin-top:11px;font-size:11px;color:#52685a}
+@media(max-width:1050px){.intro{grid-template-columns:1fr;gap:34px}.intro h1{font-size:clamp(54px,7.6vw,84px)}.nestor-intro{display:flex;gap:24px;align-items:center;text-align:left;padding:24px;max-width:650px}.nestor-portrait{flex-shrink:0;width:130px;height:130px;margin:0}.nestor-intro p{max-width:380px;margin-bottom:14px}.nestor-note{display:inline-block;margin-left:12px}}
+@media(max-width:550px){.intro{padding:48px 22px 44px;gap:30px}.intro h1{font-size:clamp(42px,11.2vw,60px);letter-spacing:-2.7px;line-height:1.07}.intro .eyebrow{font-size:10px;letter-spacing:1.3px}.intro-actions{gap:8px}.intro-actions a{padding:13px 15px;font-size:12px;gap:13px}.nestor-intro{gap:16px;padding:20px 16px;border-radius:18px}.nestor-portrait{width:86px;height:86px}.nestor-intro h2{font-size:24px}.nestor-intro p{font-size:12px;line-height:1.55}.nestor-cta{font-size:12px;padding:11px 16px;min-height:44px}.nestor-note{display:block;margin:9px 0 0;font-size:10px}.topright .product-link{font-size:12px;gap:6px;padding-right:10px}.topbar{gap:14px}}

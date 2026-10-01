@@ -26,7 +26,7 @@ let html = await readFile(new URL('index.html', output), 'utf8')
 const formSection = /<section class="make" id="make">.*?<\/section>/s
 if (!formSection.test(html)) throw new Error('Could not locate the local generation section.')
 html = html.replace(formSection, localSetup)
-  .replace('Explore the real pipeline behind Nestor’s fuzzy companion. Play with twelve emotions, change its look, then use your own reference and fal key to make a new one.', 'Explore the real pipeline behind Nestor’s fuzzy companion. Try twelve emotions, mix colors and accessories, and watch your little character come to life. No API key needed.')
+  .replace('Try twelve animated expressions, mix colors and accessories, and explore the fal.ai pipeline behind Nestor. Run it locally to generate a character of your own.', 'Try twelve animated expressions, mix colors and accessories, and explore the fal.ai pipeline behind Nestor. No API key needed to play.')
   .replace('Offline sample</span>', 'No API key needed</span>')
 await writeFile(new URL('index.html', output), html)
 await writeFile(new URL('.nojekyll', output), '')

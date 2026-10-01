@@ -1,9 +1,32 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f7f7f4"><title>Live Avatars — make a little character feel alive</title><link rel="stylesheet" href="./styles.css?v=4"><script type="module" src="./app.js?v=4"></script></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f7f7f4"><meta name="description" content="An open-source playground for creating cute animated avatars. Try 12 moods, change colors, mix accessories, and explore the fal.ai pipeline behind Nestor."><title>Live Avatars — create cute animated avatars</title><link rel="stylesheet" href="./styles.css?v=5"><script type="module" src="./app.js?v=4"></script></head>
 <body>
-  <header class="topbar"><a class="wordmark" href="#top"><span class="mark">●<i>••</i></span> live avatars</a><div class="topright"><span class="badge">Open-source playground</span><a class="product-link" href="https://hirenestor.com/" target="_blank" rel="noopener noreferrer">Hire Nestor ↗</a></div></header>
+  <header class="topbar">
+    <a class="wordmark" href="#top"><span class="mark">●<i>••</i></span> live avatars</a>
+    <div class="topright"><span class="badge">Open-source playground</span><a class="product-link" href="https://hirenestor.com/" target="_blank" rel="noopener noreferrer"><img src="./sample/portraits/idle.jpg" width="30" height="30" alt="">Hire Nestor <span aria-hidden="true">↗</span></a></div>
+  </header>
   <main id="top">
-    <section class="intro"><div class="eyebrow"><span class="dot"></span> From one reference to a whole personality</div><h1>A little character.<br><em>A lot of life.</em></h1><p>Explore the real pipeline behind Nestor’s fuzzy companion. Play with twelve emotions, change its look, then use your own reference and fal key to make a new one.</p><div class="intro-actions"><a class="primary-link" href="#playground">Meet the avatar <span>↘</span></a><a class="secondary-link" href="#make">Build your own <span>↘</span></a></div></section>
+    <section class="intro">
+      <div class="intro-copy">
+        <div class="eyebrow">THE OPEN-SOURCE AVATAR PLAYGROUND</div>
+        <h1>Create cute avatars.<br><em>Bring them to life.</em></h1>
+        <p class="intro-description">Try twelve animated expressions, mix colors and accessories, and explore the fal.ai pipeline behind Nestor. Run it locally to generate a character of your own.</p>
+        <div class="intro-actions">
+          <a class="primary-link" href="#playground">Try the playground <span aria-hidden="true">↘</span></a>
+          <a class="secondary-link" href="#make">Build your own <span aria-hidden="true">↘</span></a>
+          <a class="secondary-link star-link" href="https://github.com/obaid/live-avatars" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">☆</span> Star on GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <aside class="nestor-intro" aria-labelledby="nestor-title">
+        <img class="nestor-portrait" src="./sample/portraits/idle.jpg" width="180" height="180" alt="Nestor, a soft mint avatar with curious eyes">
+        <div class="nestor-copy">
+          <h2 id="nestor-title">Meet Nestor.</h2>
+          <p>The little helper behind this playground. A personal AI assistant for the everyday tasks on your mind.</p>
+          <a class="nestor-cta" href="https://hirenestor.com/" target="_blank" rel="noopener noreferrer">Hire Nestor <span aria-hidden="true">↗</span></a>
+          <span class="nestor-note">Join the early-access waitlist</span>
+        </div>
+      </aside>
+    </section>
     <section class="workspace" id="playground" aria-label="Avatar playground">
       <div class="stage-panel"><div class="panel-top"><span class="tiny-label">LIVE PREVIEW</span><span class="signal"><span class="pulse"></span> Offline sample</span></div><div class="stage"><canvas id="avatar" width="320" height="320" role="img" aria-label="Nestor avatar preview"></canvas><video id="sourceVideo" muted playsinline preload="metadata" hidden></video><img id="sourcePoster" alt="" hidden><div class="stage-hint" id="stageHint">A curious little pause.</div></div><div class="stage-bottom"><button id="playPause" type="button" aria-label="Pause animation">❚❚ <span>Pause</span></button><button id="replay" type="button">↺ <span>Replay</span></button><span id="assetStatus">12 moods · 15 motion clips</span></div></div>
       <div class="controls-panel"><div class="controls-head"><span class="tiny-label">THE CHARACTER LAB</span><h2>What’s the mood?</h2><p>One familiar face, with a different expression for each moment.</p></div><div class="state-grid" id="stateGrid" role="group" aria-label="Expression"></div><div class="divider"></div><div class="control-section"><h3>Make it yours <span>01 / 02</span></h3><div class="colors" id="colors" role="group" aria-label="Color"></div></div><div class="control-section"><h3>A little extra <span>CHOOSE ANY</span></h3><div class="accessories" id="accessories" role="group" aria-label="Accessories; choose any"></div></div></div>
